@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Интерактивный тренажёр по математике для 6 класса">
+  <title>Математика — 6 класс</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="На главную"><span class="brand-icon">∑</span> Математика <span>6 класс</span></a>
+    <div class="top-note">Тренируйся • Думай • Побеждай</div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">ИНТЕРАКТИВНЫЙ ТРЕНАЖЁР</p>
+        <h1>Математика может быть <span>интересной!</span></h1>
+        <p class="hero-text">Проверь свои знания, реши логические задачи и узнай, на что способен твой математический ум.</p>
+        <div class="hero-stats">
+          <div><strong>2</strong><small>режима</small></div>
+          <div><strong>12</strong><small>вопросов</small></div>
+          <div><strong>∞</strong><small>возможностей</small></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="float-card card-a">π</div><div class="float-card card-b">÷</div>
+        <div class="float-card card-c">√</div><div class="float-card card-d">×</div>
+        <div class="math-spark">✦</div>
+      </div>
+    </section>
+
+    <section class="mode-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">ВЫБЕРИ СВОЁ ЗАДАНИЕ</p><h2>С чего начнём?</h2></div>
+        <div class="progress-summary"><span class="progress-dot"></span> Твой результат сохраняется на этой странице</div>
+      </div>
+      <div class="mode-grid">
+        <button class="mode-card active" data-mode="quiz" type="button">
+          <span class="mode-icon purple">✎</span><span class="mode-title">Математический тест</span>
+          <span class="mode-description">Дроби, проценты, уравнения и вычисления</span><span class="mode-arrow">→</span>
+        </button>
+        <button class="mode-card" data-mode="logic" type="button">
+          <span class="mode-icon orange">◇</span><span class="mode-title">Логические задачи</span>
+          <span class="mode-description">Задачки на смекалку и нестандартное мышление</span><span class="mode-arrow">→</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="workspace" id="workspace">
+      <div class="quiz-top">
+        <div><p class="eyebrow" id="mode-eyebrow">ПРОВЕРЬ СЕБЯ</p><h2 id="activity-title">Математический тест</h2></div>
+        <span class="level-pill" id="level-pill">6 КЛАСС</span>
+      </div>
+      <div class="progress-line"><div id="progress-fill"></div></div>
+      <div class="question-meta"><span id="question-count">Вопрос 1 из 6</span><span id="score-label">Правильных ответов: 0</span></div>
+      <div class="question-panel">
+        <div class="question-number" id="question-number">01</div>
+        <div class="question-content">
+          <h3 id="question-text">Сколько будет 3/4 + 1/4?</h3>
+          <div class="options" id="options"></div>
+          <div class="feedback" id="feedback" aria-live="polite"></div>
+          <div class="question-actions">
+            <button class="hint-button" id="hint-button" type="button">Подсказка</button>
+            <button class="primary-button" id="next-button" type="button" disabled>Следующий вопрос <span>→</span></button>
+          </div>
+          <p class="hint-text" id="hint-text" hidden></p>
+        </div>
+      </div>
+      <div class="result-panel" id="result-panel" hidden>
+        <div class="result-medal">★</div>
+        <p class="eyebrow">ТВОЙ РЕЗУЛЬТАТ</p>
+        <h2 id="result-title">Отличная работа!</h2>
+        <div class="result-score" id="result-score">5 из 6</div>
+        <p id="result-message"></p>
+        <button class="primary-button" id="restart-button" type="button">Пройти ещё раз ↻</button>
+      </div>
+    </section>
+    <footer><span>∑</span> Учись с интересом — и сложное станет простым.</footer>
+  </main>
+</body>
+</html>
